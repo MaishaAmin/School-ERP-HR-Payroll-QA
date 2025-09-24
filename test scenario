@@ -1,0 +1,25 @@
+# Test Scenarios – ERP SCM Module
+
+## Overview
+High-level scenarios to validate the Supply Chain Management workflows.
+
+---
+
+### Inventory Management
+- Verify product can be added with mandatory fields (name, SKU, price, stock).
+- Verify stock levels update after purchase order is completed.
+- Verify system prevents negative stock values.
+- Verify low stock alert is triggered when threshold is reached.
+
+### Purchase Orders
+- Verify purchase order can be created by authorized users.
+- Verify approval workflow functions correctly for pending orders.
+- Verify system prevents duplicate purchase orders for the same vendor and item.
+
+### Vendor Management
+- Verify vendor details can be created, updated, and deleted.
+- Verify inactive vendors cannot be assigned to purchase orders.
+
+### Reporting
+- Verify daily stock movement report shows accurate data.
+- Verify purchase history report is generated correctly per vendor.
