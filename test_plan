@@ -1,0 +1,106 @@
+# Test Plan – Supply Chain Management (SCM) Module
+
+## Project Overview
+The SCM module manages procurement, inventory, and order fulfillment processes. The goal of testing is to ensure reliable operations and accurate data flow between procurement, stock management, and order processing.
+
+## Objectives
+- Verify correctness of procurement workflows (purchase requisition, purchase order, goods receipt).
+- Validate inventory updates after goods receipt and issue.
+- Ensure accurate order creation, fulfillment, and invoicing.
+- Test integration between SCM and Finance modules.
+
+## Scope
+**In Scope:**
+- Procurement: PR → PO → GRN workflow
+- Inventory: Stock updates, transfers, and adjustments
+- Order Management: Order creation, status tracking, and fulfillment
+- Reporting: Inventory reports, procurement analytics
+
+**Out of Scope:**
+- Third-party logistics system integration
+- Performance/stress testing
+
+## Test Approach
+- Manual testing for functional workflows
+- API testing for stock synchronization (Postman)
+- Regression testing for core features during updates
+
+## Deliverables
+- Test Cases for SCM workflows
+- Bug Reports with severity & priority
+- Test Summary Report
+
+## Entry Criteria
+- Requirements approved
+- SCM module deployed in QA environment
+- Test data available
+
+## Exit Criteria
+- All high & medium severity defects resolved
+- >95% test case execution completed
+- Sign-off from stakeholders
+
+## Risks & Mitigation
+- **Risk:** Data sync delays between SCM and Finance  
+  **Mitigation:** Perform API-level validation and mock data testing  
+- **Risk:** Incomplete test data  
+  **Mitigation:** Prepare sample master data before test execution
+
+## Roles & Responsibilities
+- QA Engineer: Design test cases, execute tests, report bugs
+- Developer: Resolve defects
+- Business Analyst: Validate requirements and clarify conditions
+
+# Test Plan – Finance & Accounting (F&A) Module
+
+## Project Overview
+The F&A module manages financial transactions including accounts receivable, accounts payable, general ledger, and reporting. Testing ensures financial accuracy, compliance, and integration with other ERP modules.
+
+## Objectives
+- Validate financial workflows including invoicing, payments, and reconciliations.
+- Ensure accuracy of General Ledger (GL) postings.
+- Verify data flow between F&A, Payroll, and SCM modules.
+- Test financial reporting for accuracy and compliance.
+
+## Scope
+**In Scope:**
+- Accounts Receivable: Invoice creation, payment collection
+- Accounts Payable: Vendor invoices, payment posting
+- General Ledger: Journal entries, reconciliations
+- Reports: Balance sheet, P&L statement
+
+**Out of Scope:**
+- External accounting system integration
+- Performance load testing
+
+## Test Approach
+- Manual functional testing of core finance workflows
+- API testing for data sync between modules
+- Exploratory testing for edge cases in financial calculations
+
+## Deliverables
+- Finance test cases
+- Bug reports with detailed defect logs
+- Test Summary Report
+
+## Entry Criteria
+- Business requirements finalized
+- Test environment set up with finance data
+- Access to integrated Payroll and SCM modules
+
+## Exit Criteria
+- 100% of critical test cases executed
+- No high-severity open defects
+- UAT sign-off received
+
+## Risks & Mitigation
+- **Risk:** Incorrect financial data migration  
+  **Mitigation:** Run reconciliation scripts before test execution  
+- **Risk:** Misconfigured tax rules  
+  **Mitigation:** Validate with test data across multiple scenarios
+
+## Roles & Responsibilities
+- QA Engineer: Prepare finance-related test cases, execute, and report bugs
+- Finance SME: Validate accuracy of financial results
+- Developer: Fix reported issues
+
